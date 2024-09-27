@@ -11,7 +11,7 @@ import FileSmileIcon from "../icons/FileSmile.astro";
   class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
 >
 </div>
-<div class="max-w-xl">
+<div class="max-w-full">
   <div class="flex gap-4 mb-4">
     <img
       class="rounded-full shadow-lg size-16"
@@ -33,14 +33,14 @@ import FileSmileIcon from "../icons/FileSmile.astro";
     Hola, soy santiago
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-cyan-200 [&>strong]:text-cyan-500 [&>strong]:font-semibold dark:text-gray-300"
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-cyan-200 [&>strong]:text-cyan-500 [&>strong]:font-semibold dark:text-gray-300 text-justify"
   >
     + 1 año de experiencia. <strong>Desarrollador de Software</strong> con experiencia
     en el desarrollo fullstack de Quito, Ecuador 🇪🇨. Utilizando Flutter, React, Django,
     Node.js, .NET, Oracle, MongoDB, SQLite, MySQL, y SQL server, siempre con ganas
     de aprender y mejorar en lo que me apasiona.
   </p>
-  <nav class="flex flex-wrap gap-4 mt-8">
+  <nav class="flex flex-wrap gap-4 mt-8 justify-center">
     <SocialPill href="mailto:santiagollumiquinga36@gmail.com">
       <MailIcon class="size-4" />
       Contáctame
@@ -52,12 +52,20 @@ import FileSmileIcon from "../icons/FileSmile.astro";
       LinkedIn
     </SocialPill>
     <SocialPill
-      href="CV_Santiago.pdf"
+      href="https://drive.google.com/file/d/1FMRns6PmZQ0bmgO4Yr0qJSJXGX4iL4hb/view?usp=drive_link"
       target="_blank"
       rel="noopener noreferrer"
     >
       <FileSmileIcon class="size-5" />
-      CV
+      CV Español
+    </SocialPill>
+    <SocialPill
+      href="https://drive.google.com/file/d/1utNC5_ZoII7XtzBTVrIl3iDo3bVYPin2/view?usp=drive_link"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <FileSmileIcon class="size-5" />
+      CV Inglés
     </SocialPill>
   </nav>
 </div>

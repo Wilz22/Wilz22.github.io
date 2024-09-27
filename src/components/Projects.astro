@@ -6,17 +6,35 @@ import CarouselItems from "./CarouselItems.astro";
 import LinkButton from "./LinkButton.astro";
 import GitHub from "../icons/GitHub.astro";
 import Link from "../icons/Link.astro";
+import MySQL from "../icons/MySQL.astro";
+import Nodejs from "../icons/Nodejs.astro";
+import Express from "../icons/Express.astro";
 
 const TAGS = {
   REACT: {
     name: "React",
-    class: "bg-black text-white",
+    class: "bg-[#1B1F23] text-white",
     icon: React,
   },
   TAILWIND: {
     name: "Tailwind CSS",
     class: "bg-[#003159] text-white",
     icon: Tailwind,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758F] text-white",
+    icon: MySQL,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-[#8CC84B] text-white",
+    icon: Nodejs,
+  },
+  EXPRESSJS: {
+    name: "Express.js",
+    class: "bg-[#333333] text-white",
+    icon: Express,
   },
 };
 const PROJECTS = [
@@ -32,7 +50,7 @@ const PROJECTS = [
       "/img/project1/Products.webp",
       "/img/project1/InsertProd.webp",
     ],
-    tags: [TAGS.REACT, TAGS.TAILWIND],
+    tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.MYSQL, TAGS.NODEJS, TAGS.EXPRESSJS],
   },
   {
     title: "Pico and Placa - Predictor",
@@ -87,11 +105,11 @@ const PROJECTS = [
             {title}
           </h3>
           <div class="flex flex-wrap mt-2">
-            <ul class="flex flex-row mb-2 gap-x-2">
+            <ul class="flex flex-wrap mb-2 gap-2">
               {tags.map((tag) => (
                 <li>
                   <span
-                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}
                   >
                     <tag.icon class="size-4" />
                     {tag.name}
