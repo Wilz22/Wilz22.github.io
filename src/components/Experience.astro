@@ -1,0 +1,38 @@
+---
+import ExperienceItems from "./ExperienceItems.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Mayo 2024 - Actualidad",
+    title: "Data Governance Intern",
+    company: "Telefónica",
+    description:
+      "Mi rol consiste en desarrollar la página web del área de BI, utilizando ASP.NET y agregando diversas funcionalidades, como la inserción de datos en una base de datos Oracle, la actualización de registros, y la búsqueda personalizada. También me encargo de mejorar los estilos de la página para hacerla más accesible y fácil de usar. Implemento automatizaciones y trabajo con PySpark para el análisis de Big Data, creando scripts en Python para generar y visualizar tableros en Power BI.",
+    link: "https://www.telefonica.com.ec/",
+  },
+  {
+    date: "Septiembre 2023 - Abril 2024",
+    title: "Software Developer Assistant",
+    company: "Pofasa",
+    description:
+      "Desarrollé una aplicación móvil personalizada que funciona tanto online como offline para la gestión de registros y automatización de procesos. La aplicación consume APIs alojadas en el servidor, lo que permite la sincronización de registros con una base de datos MySQL. También desarrollé una página web utilizando Django como backend y React como frontend, creando un dashboard personalizado, accesible y fácil de usar para los usuarios.",
+  },
+  {
+    date: "Marzo 2023 - Septiembre 2023",
+    title: "Software Developer Intern",
+    company: "Pofasa",
+    description:
+      "Durante mi trabajo diario, añadía funcionalidades al software interno de la empresa utilizando VBA. Uno de mis logros fue desarrollar el módulo de pedidos y corregir un bug de seguridad que permitía a los usuarios ingresar valores después de la fecha de corte. Además, brindé soporte en infraestructura y gestioné servicios en máquinas virtuales alojadas en VMware. Desarrollé scripts en Python para mejorar la eficiencia de los colaboradores y pusimos en marcha un sistema de tickets para la gestión de solicitudes.",
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItems {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,125 @@
+---
+// Dentro de tu Projects.astro
+import React from "../icons/React.astro";
+import Tailwind from "../icons/Tailwind.astro";
+import CarouselItems from "./CarouselItems.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHub from "../icons/GitHub.astro";
+import Link from "../icons/Link.astro";
+
+const TAGS = {
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+};
+const PROJECTS = [
+  {
+    title: "Mi Tienda",
+    description:
+      "Este es un proyecto fullstack usando como frontend react y su libreria de componentes primereact en donde gestionamos tanto productos como sus categorias y como backend usamos Node.js con Express para la creación de endpoints específicos para que el frontend pueda consumirlos.",
+    github: "https://github.com/Wilz22/mi-tienda",
+    images: [
+      "/img/project1/Home.webp",
+      "/img/project1/Categories.webp",
+      "/img/project1/InsertCat.webp",
+      "/img/project1/Products.webp",
+      "/img/project1/InsertProd.webp",
+    ],
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  {
+    title: "Pico and Placa - Predictor",
+    description:
+      "Este es un proyecto React donde predice si tu automóvil, puede circular o no según las reglasde la ciudad.",
+    link: "https://pico-and-placa.vercel.app/",
+    github: "https://github.com/Wilz22/pico-and-placa",
+    images: ["/img/project2/Home.webp", "/img/project2/RulesPicoPlaca.webp"],
+    tags: [TAGS.REACT, TAGS.TAILWIND],
+  },
+  // {
+  //   title: "Project 2",
+  //   description: "This is a description of project 2asdasd",
+  //   github: "https://github.com/Wilz22/mi-tienda",
+  //   images: [
+  //     "https://via.placeholder.com/300x200?text=Image+2-1",
+  //     "https://via.placeholder.com/300x200?text=Image+2-2",
+  //     "https://via.placeholder.com/300x200?text=Image+2-3",
+  //   ],
+  //   //  "Node.js", "Express"
+  //   tags: [TAGS.REACT, TAGS.TAILWIND],
+  // },
+  // {
+  //   title: "Project 3",
+  //   description: "This is a description of project 3sadasd",
+  //   github: "#",
+  //   images: [
+  //     "https://via.placeholder.com/300x200?text=Image+3-1",
+  //     "https://via.placeholder.com/300x200?text=Image+3-2",
+  //     "https://via.placeholder.com/300x200?text=Image+3-3",
+  //   ],
+  //   tags: [TAGS.REACT, TAGS.TAILWIND],
+  // },
+];
+---
+
+<div class="relative mx-12 pb-12 flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ images, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div
+            id="default-carousel"
+            class="shadow-white/10 relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50"
+            data-carousel="slide"
+          >
+            <CarouselItems images={images} />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
