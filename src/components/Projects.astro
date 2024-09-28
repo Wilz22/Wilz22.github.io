@@ -9,6 +9,8 @@ import Link from "../icons/Link.astro";
 import MySQL from "../icons/MySQL.astro";
 import Nodejs from "../icons/Nodejs.astro";
 import Express from "../icons/Express.astro";
+import Django from "../icons/Django.astro";
+import Python from "../icons/Python.astro";
 
 const TAGS = {
   REACT: {
@@ -36,6 +38,16 @@ const TAGS = {
     class: "bg-[#333333] text-white",
     icon: Express,
   },
+  DJANGO: {
+    name: "Django",
+    class: "bg-[#092E20] text-white",
+    icon: Django,
+  },
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#3776AB] text-white",
+    icon: Python,
+  },
 };
 const PROJECTS = [
   {
@@ -61,18 +73,21 @@ const PROJECTS = [
     images: ["/img/project2/Home.webp", "/img/project2/RulesPicoPlaca.webp"],
     tags: [TAGS.REACT, TAGS.TAILWIND],
   },
-  // {
-  //   title: "Project 2",
-  //   description: "This is a description of project 2asdasd",
-  //   github: "https://github.com/Wilz22/mi-tienda",
-  //   images: [
-  //     "https://via.placeholder.com/300x200?text=Image+2-1",
-  //     "https://via.placeholder.com/300x200?text=Image+2-2",
-  //     "https://via.placeholder.com/300x200?text=Image+2-3",
-  //   ],
-  //   //  "Node.js", "Express"
-  //   tags: [TAGS.REACT, TAGS.TAILWIND],
-  // },
+  {
+    title: "Library - Backend",
+    description:
+      "Este proyecto es una API RESTful que gestiona información de libros, autores, categorías y editoriales. Permite realizar operaciones CRUD sobre estas entidades y proporciona endpoints para consultas específicas, como obtener libros por autor, categoría o editorial, y listar autores que han publicado en una categoría dada. Está desarrollado en Node.js con Express, utilizando una base de datos relacional.",
+    github: "https://github.com/Wilz22/backend_biblioteca_crud",
+    images: [
+      "/img/project3/Home.webp",
+      "/img/project3/Categories.webp",
+      "/img/project3/Autores.webp",
+      "/img/project3/Editoriales.webp",
+      "/img/project3/Libros.webp",
+    ],
+    //  "Node.js", "Express"
+    tags: [TAGS.MYSQL, TAGS.DJANGO, TAGS.PYTHON],
+  },
   // {
   //   title: "Project 3",
   //   description: "This is a description of project 3sadasd",
