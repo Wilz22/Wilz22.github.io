@@ -5,17 +5,15 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: "https://santiagodev.me",
+  site: "https://Wilz22.github.io",
 });
 
 // import { defineConfig } from "astro/config";
+
 // import tailwind from "@astrojs/tailwind";
 
+// // https://astro.build/config
 // export default defineConfig({
 //   integrations: [tailwind()],
 //   site: "https://santiagodev.me",
-//   server: {
-//     port: 4321,
-//     https: false,
-//   },
 // });
